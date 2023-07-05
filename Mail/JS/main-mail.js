@@ -43,3 +43,9 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   }
   //FINE DOMAIN CHECKER
 })
+
+//  riga 36
+//  scrivere invece
+//  const emailDomain = [];
+//  emailDomain = emailInput.split("@");
+//  non funziona
