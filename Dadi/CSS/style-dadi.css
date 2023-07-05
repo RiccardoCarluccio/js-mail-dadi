@@ -1,10 +1,10 @@
 .mio-padre {
-  height: 400px;
+  width: 400px;
   aspect-ratio: 1/1;
   border: 1px dashed red;
 }
 
 .si-corre {
-  background-image: url('https://raw.githubusercontent.com/RiccardoCarluccio/my-father-images/main/Mio%20Padre%20che%20Corre.png?token=GHSAT0AAAAAACCZ6652XJBKXLZTOERPAOQAZFFWT3A');
+  background-image: url('https://raw.githubusercontent.com/RiccardoCarluccio/my-father-images/main/Mio%20Padre%20che%20Corre.png?token=GHSAT0AAAAAACCZ6652AX3IBDGJAIV3XRACZFF3CAA');
   background-size: cover;
 }

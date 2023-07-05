@@ -67,5 +67,4 @@ btnRollRange.addEventListener('click', function nuBordell() {
 
     mioPadre.classList.remove("si-corre");
   }
-
 })

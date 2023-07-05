@@ -12,35 +12,62 @@
 </head>
 <body>
 
-  <form>
-    <button type="button" class="btn btn-primary btn-roll">Roll the dice</button>
-  </form>
 
-  <div id="user-roll"></div>
-  <div id="cpu-roll"></div>
-  <div id="result-message"></div>
+  <div class="row justify-content-center row-gap-5 mt-5 lello">
 
-  <br><br><br>
+    <!-- ROLL SEMPLICE -->
+    <div class="col-10 d-flex flex-column align-items-center">
+      <form>
+        <button type="button" class="btn btn-primary btn-roll">Roll the dice</button>
+      </form>
 
-  <form>
-    <label for="roll-range">Enter a number per text field</label>
-    <input type="text" id="roll-range-1" name="roll-range">
-    <input type="text" id="roll-range-2" name="roll-range">
-    <input type="text" id="roll-range-3" name="roll-range">
+      <div id="user-roll"></div>
+      <div id="cpu-roll"></div>
+      <div id="result-message"></div>
+    </div>
 
-    <button type="button" class="btn btn-primary btn-roll-range">Confirm the range and sum</button>
-  </form>
+    <!-- TRIPLO ROLL -->
+    <div class="col-10 d-flex flex-column row-gap-3">
+      <form class="d-flex flex-column align-items-center row-gap-2">
+        <div class="row">
+          <label for="roll-range">Enter a number per text field</label>
+        </div>
 
-  <div id="final-user-result"></div>
-  <div id="final-cpu-result"></div>
-  <div id="final-result-message"></div>
+        <div class="row">
+          <div class="col">
+            <input type="text" id="roll-range-1" name="roll-range">
+            <input type="text" id="roll-range-2" name="roll-range">
+            <input type="text" id="roll-range-3" name="roll-range">
+         </div>
+        </div>
 
-  <div id="what-if" class="d-block"></div>
+        <button type="button" class="btn btn-primary btn-roll-range">Confirm the range and sum</button>
+      </form>
 
-  <div class="mio-padre">
-    <!-- Ubicazione di mio padre Valerio -->
+      <div class="row text-center">
+        <div id="final-user-result"></div>
+        <div id="final-cpu-result"></div>
+        <div id="final-result-message"></div>
+
+        <div id="what-if" class="d-block fw-bold"></div>
+     </div>
+
+      <div class="row justify-content-center">
+        <div class="mio-padre">
+          <!-- Ubicazione di mio padre Valerio -->
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="JS/main-dadi.js"></script>
 </body>
 </html>
+
+<!--
+    DOMANDE:
+      come far leggere nuovi input senza dover refreshare prima la pagina?
+      location.reload() lascia visibili i risultati solo per un istante e,
+        solo dopo aver premuto per la seconda volta il bottone, legge i nuovi input
+-->
