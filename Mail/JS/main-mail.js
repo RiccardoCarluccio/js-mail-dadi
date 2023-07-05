@@ -24,7 +24,7 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   for (i = 0; i < emailArray.length; i++) {
     if (emailInput === emailArray[i]) {
       document.getElementById("access-confirmation").innerHTML = 'You can login';
-      i = emailArray.length; //copiato da mio padre Pietro Leone
+      i = emailArray.length; //copiato da mio padre Pietro-Leone
     } else {
       document.getElementById("access-confirmation").innerHTML = 'Invalid email';
     }
