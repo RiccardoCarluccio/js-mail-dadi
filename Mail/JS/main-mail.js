@@ -28,10 +28,9 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   }
 
   //INIZIO DOMAIN CHECKER
-  const emailDomain = [];
   console.log(emailInput.split("@"));
 
-  emailDomain = emailInput.split("@");
+  const emailDomain = emailInput.split("@");
   console.log(emailDomain);
   
   if (emailDomain[1] !== 'boolean.com') {
