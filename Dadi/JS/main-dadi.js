@@ -53,17 +53,19 @@ btnRollRange.addEventListener('click', function nuBordell() {
 
   document.getElementById("what-if").innerHTML = 'What if the computer rolled a value lower than 18?'
   
-  if (finalCpuResult < 18) {
-    const whatIf = document.getElementById("what-if");
-    whatIf.classList.add("d-none"); //usare .replace:block>none non funziona
+  const whatIf = document.getElementById("what-if");
+  const mioPadre = document.querySelector(".mio-padre");
 
-    const mioPadre = document.querySelector(".mio-padre");
+  if (finalCpuResult < 18) {  
+    whatIf.classList.replace("d-block", "d-none"); //usare .replace:block>none non funziona
+
     mioPadre.classList.add("si-corre");
   }
 
-  // if (finalCpuResult >= 18) {    //non funziona per ri-mostrare il messaggio di "What if?"
-  //   const whatIf = document.getElementById("what-if");
-  //   whatIf.classList.replace("d-none", "d-block");
-  // }
+  if (finalCpuResult >= 18) {    //non funziona per ri-mostrare il messaggio di "What if?"
+    whatIf.classList.replace("d-none", "d-block");
+
+    mioPadre.classList.remove("si-corre");
+  }
 
 })
