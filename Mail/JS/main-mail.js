@@ -24,10 +24,6 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   for (i = 0; i < emailArray.length; i++) {
     if (emailInput === emailArray[i]) {
       document.getElementById("access-confirmation").innerHTML = 'You can login';
-    } else {  //perchè sovrascrive sempre l'IF?
-      document.getElementById("access-confirmation").innerHTML = 'Invalid email';
-    }
+    } //da riflettere su un modo per dare un messaggio di errore
   }
 })
-
-//anche con un ELSE IF (emailInput !== emailArray[i] si presenta lo stesso problema
