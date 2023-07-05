@@ -24,6 +24,18 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   for (i = 0; i < emailArray.length; i++) {
     if (emailInput === emailArray[i]) {
       document.getElementById("access-confirmation").innerHTML = 'You can login';
-    } //da riflettere su un modo per dare un messaggio di errore
+    } //in che modo dare un messaggio di errore?
   }
+
+  //INIZIO DOMAIN CHECKER
+  const emailDomain = [];
+  console.log(emailInput.split("@"));
+
+  emailDomain = emailInput.split("@");
+  console.log(emailDomain);
+  
+  if (emailDomain[1] !== 'boolean.com') {
+    document.getElementById("access-confirmation").innerHTML = 'Wrong domain';
+  }
+  //FINE DOMAIN CHECKER
 })
