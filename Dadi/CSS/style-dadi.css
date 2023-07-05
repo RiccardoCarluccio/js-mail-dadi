@@ -1,5 +1,10 @@
+.mio-padre {
+  height: 400px;
+  aspect-ratio: 1/1;
+  border: 1px dashed red;
+}
+
 .si-corre {
   background-image: url('https://avatars.githubusercontent.com/u/132392103?v=4');
-  width: 400px;
-  aspect-ratio: 1/1;
+  background-size: cover;
 }

@@ -55,12 +55,15 @@ btnRollRange.addEventListener('click', function nuBordell() {
   
   if (finalCpuResult < 18) {
     const whatIf = document.getElementById("what-if");
-    whatIf.classList.add("d-none");
+    whatIf.classList.add("d-none"); //usare .replace:block>none non funziona
 
     const mioPadre = document.querySelector(".mio-padre");
-    let siCorre = document.createElement("div");
-    siCorre.classList.add("si-corre");
-    mioPadre.append(siCorre);
+    mioPadre.classList.add("si-corre");
   }
+
+  // if (finalCpuResult >= 18) {    //non funziona per ri-mostrare il messaggio di "What if?"
+  //   const whatIf = document.getElementById("what-if");
+  //   whatIf.classList.replace("d-none", "d-block");
+  // }
 
 })
