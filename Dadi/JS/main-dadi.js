@@ -18,3 +18,23 @@ btnRoll.addEventListener('click', function roll() {
     document.getElementById("result-message").innerHTML = 'You lost the roll'
   }
 })
+
+//BONUS con somma di 3 numeri
+const btnRollRange = document.querySelector('.btn-roll-range');
+
+const userFirstRoll = document.getElementById('roll-range-1').value;
+const userSecondRoll = document.getElementById('roll-range-2').value;
+const userThirdRoll = document.getElementById('roll-range-3').value;
+
+btnRollRange.addEventListener('click', function nuBordell() {
+  const finalUserResult = parseInt(userFirstRoll) + parseInt(userSecondRoll) + parseInt(userThirdRoll);
+  console.log(finalUserResult);
+
+  const cpuFirstRoll = Math.floor(Math.random() * parseInt(userFirstRoll) * 2) + 1;
+  const cpuSecondRoll = Math.floor(Math.random() * parseInt(userSecondRoll) * 2) + 1;
+  const cpuThirdRoll = Math.floor(Math.random() * parseInt(userThirdRoll) * 2) + 1;
+
+  console.log(cpuFirstRoll);
+  console.log(cpuSecondRoll)
+  console.log(cpuThirdRoll)
+})
