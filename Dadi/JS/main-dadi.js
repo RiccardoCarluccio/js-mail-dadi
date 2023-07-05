@@ -37,4 +37,30 @@ btnRollRange.addEventListener('click', function nuBordell() {
   console.log(cpuFirstRoll);
   console.log(cpuSecondRoll)
   console.log(cpuThirdRoll)
+
+  const finalCpuResult = parseInt(cpuFirstRoll) + parseInt(cpuSecondRoll) + parseInt(cpuThirdRoll);
+
+  document.getElementById("final-user-result").innerHTML = `You rolled: ${finalUserResult}`;
+  document.getElementById("final-cpu-result").innerHTML = `The computer rolled: ${finalCpuResult}`;
+
+  if (finalUserResult > finalCpuResult) {
+    document.getElementById("final-result-message").innerHTML = 'You won the roll'
+  } else if (finalUserResult === finalCpuResult) {
+    document.getElementById("final-result-message").innerHTML = 'Draw'
+  } else {
+    document.getElementById("final-result-message").innerHTML = 'You lost the roll'
+  }
+
+  document.getElementById("what-if").innerHTML = 'What if the computer rolled a value lower than 18?'
+  
+  if (finalCpuResult < 18) {
+    const whatIf = document.getElementById("what-if");
+    whatIf.classList.add("d-none");
+
+    const mioPadre = document.querySelector(".mio-padre");
+    let siCorre = document.createElement("div");
+    siCorre.classList.add("si-corre");
+    mioPadre.append(siCorre);
+  }
+
 })
