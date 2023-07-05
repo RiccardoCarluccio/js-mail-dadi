@@ -57,12 +57,12 @@ btnRollRange.addEventListener('click', function nuBordell() {
   const mioPadre = document.querySelector(".mio-padre");
 
   if (finalCpuResult < 18) {  
-    whatIf.classList.replace("d-block", "d-none"); //usare .replace:block>none non funziona
+    whatIf.classList.replace("d-block", "d-none");
 
     mioPadre.classList.add("si-corre");
   }
 
-  if (finalCpuResult >= 18) {    //non funziona per ri-mostrare il messaggio di "What if?"
+  if (finalCpuResult >= 18) {
     whatIf.classList.replace("d-none", "d-block");
 
     mioPadre.classList.remove("si-corre");
