@@ -24,7 +24,10 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   for (i = 0; i < emailArray.length; i++) {
     if (emailInput === emailArray[i]) {
       document.getElementById("access-confirmation").innerHTML = 'You can login';
-    } //in che modo dare un messaggio di errore?
+      i = emailArray.length; //copiato da mio padre Pietro Leone
+    } else {
+      document.getElementById("access-confirmation").innerHTML = 'Invalid email';
+    }
   }
 
   //INIZIO DOMAIN CHECKER
@@ -34,7 +37,9 @@ btnEmailCheck.addEventListener('click', function getEmail() {
   console.log(emailDomain);
   
   if (emailDomain[1] !== 'boolean.com') {
-    document.getElementById("access-confirmation").innerHTML = 'Wrong domain';
+    document.getElementById("domain-error").innerHTML = 'Wrong domain';
+  } else {
+    document.getElementById("domain-error").innerHTML = '';
   }
   //FINE DOMAIN CHECKER
 })
