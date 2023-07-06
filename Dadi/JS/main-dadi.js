@@ -22,17 +22,17 @@ btnRoll.addEventListener('click', function roll() {
 //BONUS con somma di 3 numeri
 const btnRollRange = document.querySelector('.btn-roll-range');
 
-const userFirstRoll = document.getElementById('roll-range-1').value;
-const userSecondRoll = document.getElementById('roll-range-2').value;
-const userThirdRoll = document.getElementById('roll-range-3').value;
+const userFirstRoll = document.getElementById('roll-range-1');
+const userSecondRoll = document.getElementById('roll-range-2');
+const userThirdRoll = document.getElementById('roll-range-3');
 
 btnRollRange.addEventListener('click', function nuBordell() {
-  const finalUserResult = parseInt(userFirstRoll) + parseInt(userSecondRoll) + parseInt(userThirdRoll);
+  const finalUserResult = parseInt(userFirstRoll.value) + parseInt(userSecondRoll.value) + parseInt(userThirdRoll.value);
   console.log(finalUserResult);
 
-  const cpuFirstRoll = Math.floor(Math.random() * parseInt(userFirstRoll) * 2) + 1;
-  const cpuSecondRoll = Math.floor(Math.random() * parseInt(userSecondRoll) * 2) + 1;
-  const cpuThirdRoll = Math.floor(Math.random() * parseInt(userThirdRoll) * 2) + 1;
+  const cpuFirstRoll = Math.floor(Math.random() * parseInt(userFirstRoll.value) * 2) + 1;
+  const cpuSecondRoll = Math.floor(Math.random() * parseInt(userSecondRoll.value) * 2) + 1;
+  const cpuThirdRoll = Math.floor(Math.random() * parseInt(userThirdRoll.value) * 2) + 1;
 
   console.log(cpuFirstRoll);
   console.log(cpuSecondRoll)
